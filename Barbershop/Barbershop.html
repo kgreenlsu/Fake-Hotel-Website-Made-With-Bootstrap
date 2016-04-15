@@ -1,0 +1,330 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Barbershop</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Kanit:700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Quintessential' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+
+    <link rel="stylesheet" type="text/css" href="Barbershop.css">
+
+    <script>
+        $(document).ready(function () {
+            // Add scrollspy to <body>
+            $('body').scrollspy({ target: ".navbar", offset: 50 });
+
+            // Add smooth scrolling on all links inside the navbar
+            $("#myNavbar a").on('click', function (event) {
+
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 600, function () {
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            });
+
+            $(window).scroll(function () {
+                $(".slideanim").each(function () {
+                    var pos = $(this).offset().top;
+
+                    var winTop = $(window).scrollTop();
+                    if (pos < winTop + 900) {
+                        $(this).addClass("slide");
+                    }
+                });
+            });
+        });
+    </script>
+
+    
+</head>
+<body>
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar navbar-fixed-top w3-red">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar w3-white"></span>
+                    <span class="icon-bar w3-white"></span>
+                    <span class="icon-bar w3-white"></span>
+                </button>
+                <a class="navbar-brand" title="Sharp Cuts" href="#home">Cuts From Above</a>
+            </div>
+            <div>
+                <div class=" navbar-right collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#aboutus">About Us</a></li>
+                        <li><a href="#appointment">Appointment</a></li>
+                        <li><a href="#prices">Pricing</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--END NAVIGATION BAR -->
+
+    <!-- HOME SECTION -->
+    <div id="home">
+        <div class="container-fluid jumbotron text-center">
+            <br />
+            <h1 id="title">Cuts From Above</h1>
+            <p id="bible">Lorem ipsum dolor sit amet, sed eligendi</p>
+        </div>
+
+        <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <h3 id="blurbs">"The best cuts you can get in the North Philadelphia area"</h3>
+                    <h4>-Unknown</h4>
+                </div>
+
+                <div class="item">
+                    <h3 id="blurbs">"The atmosphere is a lot different than the usual barbershop, but in a good way."</h3>
+                    <h4>-Unknown</h4>
+                </div>
+
+                <div class="item">
+                    <h3 id="blurbs">"I always feel safe when I am in this barbershop no matter the time or day."</h3>
+                    <h4>-Unknown</h4>
+                </div>
+
+                <div class="item">
+                    <h3 id="blurbs">"Best staff that really wish the best for you both physically and spiritually."</h3>
+                    <h4>-Unknown</h4>
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            </a>
+        </div>
+    </div>
+    <!--END HOME SECTION -->
+
+
+
+
+
+
+    <!--ABOUT THE BARBERS SECTION-->
+    <div id="aboutus" class="w3-red slideanim">
+        <div class="container-fluid text-capitalize text-center">
+            <h1 id="barberHeader"><i class="fa fa-scissors"></i>Meet the barbers <i id="myIcon" class="fa fa-scissors"></i></h1>
+        </div>
+        <hr />
+        <div class="row text-center">
+            <div class="col-sm-4">
+                <p class="names"><strong>Mr. Green</strong></p>
+                <img src="unknown.gif" class="Profile img-responsive img-circle" />
+                <br />
+                <p id="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="col-sm-4">
+                <p class="names"><strong>Mrs. Brown</strong></p>
+                <img src="unknown.gif" class="Profile img-responsive img-circle" />
+                <br />
+                <p id="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+
+            </div>
+            <div class="col-sm-4">
+                <p class="names"><strong>Mr. Black</strong></p>
+                <img src="unknown.gif" class="Profile img-responsive img-circle" />
+                <br />
+                <p id="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+
+            </div>
+        </div>
+    </div>
+    <!--END ABOUT THE BARBERS SECTION-->
+
+
+
+
+
+
+    <!--BEGIN THE APPOINTMENT THE BARBERS SECTION-->
+    <div id="appointment" class="container-fluid text-center">
+        <h1 id="haircutHeader">Want a haircut?</h1>
+        <hr />
+        <div class="col-sm-6">
+            <img id="appmnt" src="haircut.jpeg" height="500" width="500" class="img-responsive img-circle" />
+        </div>
+
+        <div class="col-sm-6">
+            <img id="appmnt" src="womenhaircut.jpeg" class="img-responsive img-circle" /></div>
+        <br />
+        <br />
+        <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#appointmentModal">Make an appointment</button>
+        <br />
+    </div>
+    <br />
+
+    <!--FORM FOR THE MODAL-->
+    <div class="modal fade" id="appointmentModal" role="dialog">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <div class="modal-header w3-red">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <br />
+                    <h5><span class="fa fa-calendar"></span>Schedule An Appointment</h5>
+                </div>
+            </div>
+            <form role="form">
+                <div class="form-group">
+                    <label for="month"><i class="fa fa-calendar-o"></i>Select The Date </label>
+                    <input type="date" class="form-control" id="month" placeholder="Select Month">
+                </div>
+
+                <div class="form-group">
+                    <label for="time"><i class="fa fa-clock-o"></i>Select The Time </label>
+                    <input type="time" class="form-control" id="time" placeholder="Select Time">
+                </div>
+
+                <div class="form-group">
+                    <label for="name"><i class="fa fa-pencil"></i>Name </label>
+                    <input type="text" class="form-control" id="name" placeholder="Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email"><i class="fa fa-envelope"></i>Email </label>
+                    <input type="email" class="form-control" id="email" placeholder="Email">
+                </div>
+
+                <button type="submit" data-dismiss="modal" class="btn btn-block w3-red">
+                    Confirm Appointment 
+                <span class="glyphicon glyphicon-ok"></span>
+                </button>
+                <br />
+
+            </form>
+            <div class="modal-footer w3-red">
+                <button type="submit" id="cancelBtn" data-dismiss="modal" class="btn btn-block w3-red">Cancel <span class="fa fa-times-circle"></span></button>
+
+            </div>
+            <!-- END FORM FOR THE MODAL -->
+
+        </div>
+    </div>
+    <!--END THE APPOINTMENT THE BARBERS SECTION-->
+
+
+
+
+    <!--BEGIN PRICING SECTION-->
+    <div id="prices" class="w3-red container-fluid text-center slideanim">
+        <h1 id="priceHeader">Prices <i class="fa fa-money"></i></h1>
+        <hr />
+        <br />
+        <div class="row">
+            <div class="col-sm-4 col-xs-12">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <h1 id="pnlHead">Children</h1>
+                    </div>
+                    <div class="panel-body">
+                        <p><strong>$15</strong> Full head</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <h1 id="pnlHead">Men</h1>
+                    </div>
+                    <div class="panel-body">
+                        <p><strong>$45</strong> Dye & Hair Cut</p>
+                        <p><strong>$30</strong> Head & Beard</p>
+                        <p><strong>$25</strong> Beard Only</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <h1 id="pnlHead">Women</h1>
+                    </div>
+                    <div class="panel-body">
+                        <p><strong>As Low As $100</strong> Braids</p>
+                        <p><strong>$35</strong> Dye & Hair Cut</p>
+                        <p><strong>$25</strong> Blowouts</p>
+                        <p><strong>$20</strong> Head Only</p>
+                        <p><strong>$15</strong> Highlights</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END PRICING SECTION-->
+
+
+
+
+    <!-- BEGIN CONTACT SECTION -->
+    <div id="contact" class="w3-light-grey container-fluid text-center">
+        <h1>Contact Us</h1>
+        <hr />
+        <p id="contactInfo"><i class="fa fa-map-marker"></i><strong>Address</strong>: 2601 Fake Address Ave, Philadelphia, PA 19XXX</p>
+        <p id="contactInfo"><i class="fa fa-mobile"></i><strong>Phone Number</strong>: (215) XXX-XXXX</p>
+        <p id="finePrint">Call to schedule an appoinment</p>
+        <p id="finePrint">We Do Walk-Ins</p>
+        <p id="finePrint">**** Cash Only Please ****</p>
+        <hr />
+        <p id="contactInfo">Follow Us On Social Media</p>
+        <div>
+            <a id="links" href="#FB"><i title="FaceBook" class="fa fa-facebook socialMedia"></i></a>
+            <a id="links" href="#IG"><i title="Instagram" class="fa fa-instagram socialMedia"></i></a>
+            <a id="links" href="#TW"><i title="Twitter" class="fa fa-twitter socialMedia"></i></a>
+            <a id="links" href="#YT"><i title="Youtube" class="fa fa-youtube-play socialMedia"></i></a>
+        </div>
+        <br />
+        <div>
+            <p>This webiste is for educational purposes only I made this website based on a real barbershop that is in the North Philadelphia area.</p>
+            <p id="contactInfo">© Copyright 2016 Kyle Green All rights reserved.</p>
+
+        </div>
+    </div>
+    <!-- END CONTACT SECTION -->
+
+
+</body>
+</html>

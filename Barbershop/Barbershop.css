@@ -1,0 +1,287 @@
+﻿   body {
+            overflow-x: hidden;
+        }
+
+        #home {
+            padding-top: 3em;
+            height: 600px;
+        }
+
+        #appointment {
+            padding-top: 3em;
+            height: auto;
+        }
+
+        #aboutus {
+            padding-top: 3em;
+            height: auto;
+        }
+
+        #contact {
+            padding-top: 3em;
+            height: auto;
+        }
+
+        #prices {
+            padding-top: 3em;
+            height: auto;
+        }
+
+        .carousel-indicators {
+            bottom: -50px;
+        }
+
+        .carousel-inner {
+            margin: .5em;
+            margin-bottom: 50px;
+        }
+
+        #title, h3, h4, p {
+            color: black;
+        }
+
+        #title {
+            font-family: 'Kanit', cursive;
+        }
+
+        .carousel-control.left, .carousel-control.right {
+            background-image: none;
+            border-color: red;
+            color: red;
+        }
+
+        .panel:hover {
+            box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+        }
+
+        .carousel-indicators li {
+            display: inline-block;
+            cursor: pointer;
+            border: none;
+            border-radius: 50%;
+            background-color: #FFF;
+            box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);
+        }
+
+        .carousel-indicators .active {
+            background-color: rgb(255, 0, 0);
+        }
+
+        .Profile {
+            margin: 0 auto;
+            border: solid 2px black;
+            box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+        }
+
+        #bio {
+            font-family: 'Roboto', sans-serif;
+            margin: .5em;
+            color: white;
+            line-height: 2em;
+        }
+
+        .jumbotron {
+            background-color: white;
+        }
+
+        #appmnt {
+            height: 425px;
+            width: 425px;
+            margin: 0 auto;
+        }
+
+        .centerImgs {
+            display: inline-block;
+            margin: 0 auto;
+            align-content: center;
+        }
+
+        #blurbs {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        #bible {
+            font-family: 'Quintessential', cursive;
+            font-weight: 700;
+        }
+
+        .names {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2em;
+            color: white;
+            letter-spacing: .13em;
+        }
+
+        #barberHeader, #haircutHeader, #priceHeader, #contact {
+            font-family: 'Lato', sans-serif;
+        }
+
+        #barberHeader, #priceHeader {
+            font-size: 3.5em;
+        }
+
+        #haircutHeader {
+            text-transform: capitalize;
+        }
+
+        #pnlHead {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        #contactInfo {
+            font-size: 1.5em;
+        }
+
+        #finePrint {
+            font-size: 1.2em;
+            font-style: italic;
+        }
+
+        #myIcon {
+            -moz-transform: scaleX(-1);
+            -o-transform: scaleX(-1);
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+            filter: FlipH;
+            -ms-filter: "FlipH";
+        }
+
+        .navbar .nav > li > a {
+            float: none;
+            line-height: 19px;
+            padding: 1em;
+            font-family: "Lato";
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: .3em;
+            text-decoration: none;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+            color: black;
+        }
+
+            .navbar .nav > li > a:hover {
+                float: none;
+                line-height: 19px;
+                padding: 1em;
+                font-family: "Lato";
+                text-transform: uppercase;
+                font-weight: 600;
+                letter-spacing: .3em;
+                background-color: white;
+                text-decoration: none;
+                text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+                color: red;
+            }
+
+            .navbar .nav > li > a:active {
+                float: none;
+                line-height: 19px;
+                padding: 1em;
+                font-family: "Lato";
+                text-transform: uppercase;
+                font-weight: 600;
+                letter-spacing: .3em;
+                background-color: white;
+                text-decoration: none;
+                text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+                color: black;
+                border: 2px solid black;
+            }
+
+        .navbar-default .navbar-toggle {
+            border-color: transparent;
+            color: #fff !important;
+        }
+
+        hr {
+            color: black;
+            border: 2px solid rgba(0, 0, 0, 0.25);
+        }
+
+        .navbar-brand, .navbar-brand:hover {
+            line-height: 19px;
+            padding: 1em;
+            font-family: "Lato";
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: .3em;
+            text-decoration: none;
+            color: white;
+        }
+
+        .slideanim {
+            visibility: hidden;
+        }
+
+        .slide {
+            animation-name: slide;
+            -webkit-animation-name: slide;
+            animation-duration: 2s;
+            -webkit-animation-duration: 2s;
+            visibility: visible;
+        }
+
+        /* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+        @keyframes slide {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+
+        @-webkit-keyframes slide {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+
+        .socialMedia {
+            color: red;
+            font-size: 2em;
+            margin: 0 auto;
+            letter-spacing: .5em;
+        }
+
+        #links, #links:hover, #links:link, #links:active, #links:visited {
+            color: red;
+            text-decoration: none;
+        }
+
+        .modal-header, h5 {
+            color: white;
+            text-align: center;
+            font-size: 1.5em;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .modal-dialog {
+            border-radius: .5em;
+            background-color: white;
+        }
+
+        form {
+            margin: 2em;
+        }
+
+        #cancelBtn {
+            float: left;
+            font-family: 'Lato';
+            font-size: 1.2em;
+            letter-spacing: .15em;
+        }
+
+        #imgHolder {
+            display: inline-block;
+            margin: 0 auto;
+        }
